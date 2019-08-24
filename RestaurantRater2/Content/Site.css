@@ -22,3 +22,11 @@ select,
 textarea {
     max-width: 280px;
 }
+
+#index-center{
+    background-color: white;
+}
+
+.checked{
+    color: yellow;
+}
