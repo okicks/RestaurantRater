@@ -30,3 +30,7 @@ textarea {
 .checked{
     color: yellow;
 }
+
+.carouselRestaurants {
+    max-height: 125px;
+}

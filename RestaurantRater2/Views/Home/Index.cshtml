@@ -37,39 +37,27 @@
         <h2>Star Rating Meaning</h2>
         <p>What do the ratings mean?</p>
 
-        <div class="carousel slide text-center" data-ride="carousel" style="max-height: 100px;">
+        <div id="carouselRestaurants" class="carousel slide text-center" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="item active">
                     <h3>Rating</h3>
                     <h5>@Html.DisplayFor(modelItem => dict[0])</h5>
                 </div>
-                <div class="item">
-                    <h3>1</h3>
-                    <h5>@Html.DisplayFor(modelItem => dict[1])</h5>
-                </div>
-                <div class="item">
-                    <h3>2</h3>
-                    <h5>@Html.DisplayFor(modelItem => dict[2])</h5>
-                </div>
-                <div class="item">
-                    <h3>3</h3>
-                    <h5>@Html.DisplayFor(modelItem => dict[3])</h5>
-                </div>
-                <div class="item">
-                    <h3>4</h3>
-                    <h5>@Html.DisplayFor(modelItem => dict[4])</h5>
-                </div>
-                <div class="item">
-                    <h3>5</h3>
-                    <h5>@Html.DisplayFor(modelItem => dict[5])</h5>
-                </div>
+
+                @for (int i = 1; i <= 5; i++)
+                {
+                    <div class="item">
+                        <h3>@i</h3>
+                        <h5>@Html.DisplayFor(modelItem => dict[i])</h5>
+                    </div>
+                }
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <a class="left carousel-control" href="#carouselRestaurants" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <a class="right carousel-control" href="#carouselRestaurants" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
